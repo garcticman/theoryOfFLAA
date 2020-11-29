@@ -1,7 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="84fa4245-2cd2-4074-83d7-cb1d02a9c85e" name="Default Changelist" comment="" />
+    <list default="true" id="84fa4245-2cd2-4074-83d7-cb1d02a9c85e" name="Default Changelist" comment="completed short steps">
+      <change afterPath="$PROJECT_DIR$/SIMPLE/condition_test.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SIMPLE/mathOperations.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SIMPLE/machine_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/SIMPLE/machine_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SIMPLE/operations.go" beforeDir="false" afterPath="$PROJECT_DIR$/SIMPLE/operations.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SIMPLE/variable.go" beforeDir="false" afterPath="$PROJECT_DIR$/SIMPLE/variable.go" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -15,6 +40,9 @@
     </option>
   </component>
   <component name="GOROOT" path="D:\Programs\goprojs\go1.15.3" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1k9U60TVSenPw3rS3or1EVOCZtQ" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -27,7 +55,7 @@
     <property name="go.import.settings.migrated" value="true" />
     <property name="last_opened_file_path" value="$USER_HOME$" />
   </component>
-  <component name="RunManager" selected="Go Test.TestMachine_Run in dsm/SIMPLE (1)">
+  <component name="RunManager" selected="Go Test.Test_While in dsm/SIMPLE">
     <configuration name="TestMachine_Equal in dsm/SIMPLE" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="dsm" />
       <working_directory value="$PROJECT_DIR$/SIMPLE" />
@@ -39,7 +67,7 @@
       <pattern value="^\QTestMachine_Equal\E$" />
       <method v="2" />
     </configuration>
-    <configuration name="TestMachine_Run in dsm/SIMPLE (1)" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+    <configuration name="Test_Condition in dsm/SIMPLE" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="dsm" />
       <working_directory value="$PROJECT_DIR$/SIMPLE" />
       <framework value="gotest" />
@@ -47,10 +75,10 @@
       <package value="dsm/SIMPLE" />
       <directory value="$PROJECT_DIR$" />
       <filePath value="$PROJECT_DIR$" />
-      <pattern value="^\QTestMachine_Run\E$" />
+      <pattern value="^\QTest_Condition\E$" />
       <method v="2" />
     </configuration>
-    <configuration name="TestMachine_Run in dsm/SIMPLE" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+    <configuration name="Test_Sequence in dsm/SIMPLE" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="dsm" />
       <working_directory value="$PROJECT_DIR$/SIMPLE" />
       <framework value="gotest" />
@@ -58,21 +86,10 @@
       <package value="dsm/SIMPLE" />
       <directory value="$PROJECT_DIR$" />
       <filePath value="$PROJECT_DIR$" />
-      <pattern value="^\QTestMachine_Run\E$" />
+      <pattern value="^\QTest_Sequence\E$" />
       <method v="2" />
     </configuration>
-    <configuration name="TestTree in dsm/SIMPLE" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
-      <module name="dsm" />
-      <working_directory value="$PROJECT_DIR$/SIMPLE" />
-      <framework value="gotest" />
-      <kind value="PACKAGE" />
-      <package value="dsm/SIMPLE" />
-      <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$" />
-      <pattern value="^\QTestTree\E$" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Test_Statement in dsm/SIMPLE" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+    <configuration name="Test_Statement in dsm/SIMPLE (2)" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="dsm" />
       <working_directory value="$PROJECT_DIR$/SIMPLE" />
       <framework value="gotest" />
@@ -83,19 +100,46 @@
       <pattern value="^\QTest_Statement\E$" />
       <method v="2" />
     </configuration>
+    <configuration name="Test_While in dsm/SIMPLE" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="dsm" />
+      <working_directory value="$PROJECT_DIR$/SIMPLE" />
+      <framework value="gotest" />
+      <kind value="PACKAGE" />
+      <package value="dsm/SIMPLE" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <pattern value="^\QTest_While\E$" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Go Test.TestMachine_Run in dsm/SIMPLE (1)" />
-        <item itemvalue="Go Test.Test_Statement in dsm/SIMPLE" />
-        <item itemvalue="Go Test.TestMachine_Run in dsm/SIMPLE" />
+        <item itemvalue="Go Test.Test_While in dsm/SIMPLE" />
+        <item itemvalue="Go Test.Test_Sequence in dsm/SIMPLE" />
         <item itemvalue="Go Test.TestMachine_Equal in dsm/SIMPLE" />
-        <item itemvalue="Go Test.TestTree in dsm/SIMPLE" />
+        <item itemvalue="Go Test.Test_Statement in dsm/SIMPLE (2)" />
+        <item itemvalue="Go Test.Test_Condition in dsm/SIMPLE" />
       </list>
     </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="completed short steps" />
+    <option name="LAST_COMMIT_MESSAGE" value="completed short steps" />
   </component>
   <component name="WindowStateProjectService">
     <state width="739" height="466" key="DebuggerActiveHint" timestamp="1605467334827">
@@ -106,38 +150,38 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="647" y="310" key="Github.ShareDialog/0.0.1536.824@0.0.1536.824" timestamp="1606328946028" />
-    <state width="1493" height="248" key="GridCell.Tab.0.bottom" timestamp="1606329033400">
+    <state width="1493" height="261" key="GridCell.Tab.0.bottom" timestamp="1606645742908">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="248" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1606329033400" />
-    <state width="1493" height="248" key="GridCell.Tab.0.center" timestamp="1606329033400">
+    <state width="1493" height="261" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1606645742908" />
+    <state width="1493" height="261" key="GridCell.Tab.0.center" timestamp="1606645742908">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="248" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1606329033400" />
-    <state width="1493" height="248" key="GridCell.Tab.0.left" timestamp="1606329033400">
+    <state width="1493" height="261" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1606645742908" />
+    <state width="1493" height="261" key="GridCell.Tab.0.left" timestamp="1606645742907">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="248" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1606329033400" />
-    <state width="1493" height="248" key="GridCell.Tab.0.right" timestamp="1606329033400">
+    <state width="1493" height="261" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1606645742907" />
+    <state width="1493" height="261" key="GridCell.Tab.0.right" timestamp="1606645742908">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="248" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1606329033400" />
-    <state width="1493" height="261" key="GridCell.Tab.1.bottom" timestamp="1605468989894">
+    <state width="1493" height="261" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1606645742908" />
+    <state width="1493" height="261" key="GridCell.Tab.1.bottom" timestamp="1606645742908">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="261" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1605468989894" />
-    <state width="1493" height="261" key="GridCell.Tab.1.center" timestamp="1605468989894">
+    <state width="1493" height="261" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1606645742908" />
+    <state width="1493" height="261" key="GridCell.Tab.1.center" timestamp="1606645742908">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="261" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1605468989894" />
-    <state width="1493" height="261" key="GridCell.Tab.1.left" timestamp="1605468989894">
+    <state width="1493" height="261" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1606645742908" />
+    <state width="1493" height="261" key="GridCell.Tab.1.left" timestamp="1606645742908">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="261" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1605468989894" />
-    <state width="1493" height="261" key="GridCell.Tab.1.right" timestamp="1605468989894">
+    <state width="1493" height="261" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1606645742908" />
+    <state width="1493" height="261" key="GridCell.Tab.1.right" timestamp="1606645742908">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="261" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1605468989894" />
+    <state width="1493" height="261" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1606645742908" />
     <state x="611" y="173" key="refactoring.ChangeSignatureDialog" timestamp="1605466568134">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -154,6 +198,16 @@
           <url>file://$PROJECT_DIR$/SIMPLE/machine_test.go</url>
           <line>45</line>
           <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/SIMPLE/machine_test.go</url>
+          <line>91</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/SIMPLE/machine_test.go</url>
+          <line>120</line>
+          <option name="timeStamp" value="7" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

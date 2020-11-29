@@ -2,7 +2,6 @@ package SIMPLE
 
 import (
 	"fmt"
-	"strconv"
 )
 
 type Operand interface {
@@ -12,113 +11,6 @@ type Operand interface {
 	Int(Environment) int
 	Bool(Environment) bool
 	String() string
-}
-
-type IntOperand int
-
-func (operand IntOperand) Execute(Environment) Operand {
-	return operand
-}
-func (operand IntOperand) Reducible() bool {
-	return false
-}
-func (operand IntOperand) Reduce(Environment) (Operand, Environment) {
-	return operand, nil
-}
-func (operand IntOperand) Int(Environment) int {
-	return int(operand)
-}
-func (operand IntOperand) Bool(environment Environment) bool {
-	return operand.Int(environment) > 0
-}
-func (operand IntOperand) String() string {
-	return strconv.Itoa(int(operand))
-}
-
-type AddInt struct {
-	left  Operand
-	right Operand
-}
-
-func (add AddInt) Execute(environment Environment) Operand {
-	return IntOperand(add.right.Int(environment) + add.left.Int(environment))
-}
-func (add AddInt) Reducible() bool {
-	return true
-}
-func (add AddInt) Reduce(environment Environment) (operand Operand, resultEnvironment Environment) {
-	if add.left.Reducible() {
-		var leftReduced Operand
-		leftReduced, resultEnvironment = add.left.Reduce(environment)
-
-		operand = AddInt{
-			left:  leftReduced,
-			right: add.right,
-		}
-	} else if add.right.Reducible() {
-		var rightReduced Operand
-		rightReduced, resultEnvironment = add.right.Reduce(environment)
-
-		operand = AddInt{
-			left:  add.left,
-			right: rightReduced,
-		}
-	} else {
-		operand = add.Execute(environment)
-	}
-	return operand, environment
-}
-func (add AddInt) Int(environment Environment) int {
-	return add.Execute(environment).Int(environment)
-}
-func (add AddInt) Bool(environment Environment) bool {
-	return add.Int(environment) > 0
-}
-func (add AddInt) String() string {
-	return fmt.Sprintf("%s + %s", add.left, add.right)
-}
-
-type MultiplyInt struct {
-	left  Operand
-	right Operand
-}
-
-func (multiply MultiplyInt) Execute(environment Environment) Operand {
-	return IntOperand(multiply.right.Int(environment) * multiply.left.Int(environment))
-}
-func (multiply MultiplyInt) Reducible() bool {
-	return true
-}
-func (multiply MultiplyInt) Reduce(environment Environment) (operand Operand, resultEnvironment Environment) {
-	if multiply.left.Reducible() {
-		var leftReduced Operand
-		leftReduced, resultEnvironment = multiply.left.Reduce(environment)
-
-		operand = MultiplyInt{
-			left:  leftReduced,
-			right: multiply.right,
-		}
-	} else if multiply.right.Reducible() {
-		var rightReduced Operand
-		rightReduced, resultEnvironment = multiply.right.Reduce(environment)
-
-		operand = MultiplyInt{
-			left:  multiply.left,
-			right: rightReduced,
-		}
-	} else {
-		operand = multiply.Execute(environment)
-	}
-	return
-}
-func (multiply MultiplyInt) Int(environment Environment) int {
-	return multiply.Execute(environment).Int(environment)
-}
-func (multiply MultiplyInt) Bool(environment Environment) bool {
-	return multiply.Int(environment) > 0
-}
-func (multiply MultiplyInt) String() string {
-	return fmt.Sprintf("%s * %s", multiply.left, multiply.right)
 }
 
 type BoolOperand bool
@@ -150,7 +42,7 @@ func (operand BoolOperand) String() string {
 }
 
 type LessThanInt struct {
-	left Operand
+	left  Operand
 	right Operand
 }
 
@@ -193,7 +85,7 @@ func (lessThan LessThanInt) String() string {
 }
 
 type GreaterThanInt struct {
-	left Operand
+	left  Operand
 	right Operand
 }
 
@@ -236,7 +128,7 @@ func (greaterThan GreaterThanInt) String() string {
 }
 
 type EqualInt struct {
-	left Operand
+	left  Operand
 	right Operand
 }
 
@@ -278,63 +170,107 @@ func (equal EqualInt) String() string {
 	return fmt.Sprintf("%s == %s", equal.left, equal.right)
 }
 
-type Assign struct {
-	variableName string
-	Operand
+type If struct {
+	condition   Operand
+	consequence Operand
+	alternative Operand
 }
 
-func (assign Assign) Execute(environment Environment) Operand {
-	operand, _ := assign.Operand.Reduce(environment)
-	return Assign{
-		variableName: assign.variableName,
-		Operand:      operand,
+func (i If) Execute(environment Environment) Operand {
+	operand, _ := i.condition.Reduce(environment)
+	return If{
+		condition:   operand,
+		consequence: i.consequence,
+		alternative: i.alternative,
 	}
 }
-func (assign Assign) Reducible() bool {
+func (i If) Reducible() bool {
 	return true
 }
-func (assign Assign) Reduce(environment Environment) (Operand, Environment) {
-	if assign.Operand.Reducible() {
-		operand := assign.Execute(environment)
-		return operand, environment
+func (i If) Reduce(environment Environment) (resultOperand Operand, resultEnvironment Environment) {
+	resultEnvironment = environment
+	if i.condition.Reducible() {
+		resultOperand = i.Execute(environment)
 	} else {
-		newEnvironment := CopyEnvironment(environment)
-		newEnvironment[assign.variableName] = assign.Operand
-		operand := AssignEnd{
-			Operand:     assign.Operand,
+		if i.condition.Bool(environment) {
+			resultOperand = i.consequence
+		} else {
+			resultOperand = i.alternative
 		}
-		return operand, newEnvironment
+	}
+	return
+}
+func (i If) Int(environment Environment) int {
+	return i.Execute(environment).Int(environment)
+}
+func (i If) Bool(environment Environment) bool {
+	return i.Execute(environment).Bool(environment)
+}
+func (i If) String() string {
+	return fmt.Sprintf("if (%s) {%s} else {%s}", i.condition, i.consequence, i.alternative)
+}
+
+type Sequence struct {
+	first  Operand
+	second Operand
+}
+
+func (s Sequence) Execute(environment Environment) Operand {
+	operand, _ := s.Reduce(environment)
+	return operand
+}
+func (s Sequence) Reducible() bool {
+	return true
+}
+func (s Sequence) Reduce(environment Environment) (Operand, Environment) {
+	switch s.first.(type) {
+	case SentenceEnd:
+		return s.second, environment
+	default:
+		reducedFirst, newEnvironment := s.first.Reduce(environment)
+		return Sequence{
+			first:  reducedFirst,
+			second: s.second,
+		}, newEnvironment
 	}
 }
-func (assign Assign) Int(environment Environment) int {
-	return assign.Execute(environment).Int(environment)
+func (s Sequence) Int(environment Environment) int {
+	return s.Execute(environment).Int(environment)
 }
-func (assign Assign) Bool(environment Environment) bool {
-	return assign.Execute(environment).Bool(environment)
+func (s Sequence) Bool(environment Environment) bool {
+	return s.Execute(environment).Bool(environment)
 }
-func (assign Assign) String() string {
-	return fmt.Sprintf("%s = %s", assign.variableName, assign.Operand)
-}
-
-type AssignEnd struct {
-	Operand
+func (s Sequence) String() string {
+	return fmt.Sprintf("%s; %s", s.first, s.second)
 }
 
-func (end AssignEnd) Execute(environment Environment) Operand {
-	return end.Operand.Execute(environment)
+type While struct {
+	condition Operand
+	body      Operand
 }
-func (end AssignEnd) Reducible() bool {
-	return false
+
+func (w While) Execute(environment Environment) Operand {
+	panic("implement me")
 }
-func (end AssignEnd) Reduce(environment Environment) (Operand, Environment) {
-	return end, environment
+func (w While) Reducible() bool {
+	return true
 }
-func (end AssignEnd) Int(environment Environment) int {
-	return end.Operand.Int(environment)
+func (w While) Reduce(environment Environment) (Operand, Environment) {
+	return If{
+		condition: w.condition,
+		consequence: Sequence{
+			first:  w.body,
+			second: w,
+		},
+		alternative: SentenceEnd{BoolOperand(false)},
+	}, environment
 }
-func (end AssignEnd) Bool(environment Environment) bool {
-	return end.Operand.Bool(environment)
+func (w While) Int(environment Environment) int {
+	panic("implement me")
 }
-func (end AssignEnd) String() string {
-	return end.Operand.String()
+func (w While) Bool(environment Environment) bool {
+	panic("implement me")
+}
+func (w While) String() string {
+	return fmt.Sprintf("while (%s) {%s}", w.condition, w.body)
 }
