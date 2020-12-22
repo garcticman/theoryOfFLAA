@@ -19,13 +19,21 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="84fa4245-2cd2-4074-83d7-cb1d02a9c85e" name="Default Changelist" comment="completed short steps">
-      <change afterPath="$PROJECT_DIR$/SIMPLE/condition_test.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SIMPLE/mathOperations.go" afterDir="false" />
+    <list default="true" id="84fa4245-2cd2-4074-83d7-cb1d02a9c85e" name="Default Changelist" comment="completed short DFA and NFA">
+      <change afterPath="$PROJECT_DIR$/DFA/API.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DFA/DFA.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DFA/DFA_test.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LongSteps/environment.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LongSteps/logicOperations.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LongSteps/logicOperations_test.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LongSteps/mathOperations.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LongSteps/mathOperations_test.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LongSteps/types.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LongSteps/variable.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NFA/API.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NFA/NFA.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NFA/NFA_test.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SIMPLE/machine_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/SIMPLE/machine_test.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SIMPLE/operations.go" beforeDir="false" afterPath="$PROJECT_DIR$/SIMPLE/operations.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SIMPLE/variable.go" beforeDir="false" afterPath="$PROJECT_DIR$/SIMPLE/variable.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,71 +61,77 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="go.import.settings.migrated" value="true" />
-    <property name="last_opened_file_path" value="$USER_HOME$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/NFA" />
   </component>
-  <component name="RunManager" selected="Go Test.Test_While in dsm/SIMPLE">
-    <configuration name="TestMachine_Equal in dsm/SIMPLE" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\goprojs\src\dsm\NFA" />
+      <recent name="D:\goprojs\src\dsm\LongSteps" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Go Test.TestDFA in dsm/NFA (1)">
+    <configuration name="TestDFA in dsm/DFA" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="dsm" />
-      <working_directory value="$PROJECT_DIR$/SIMPLE" />
+      <working_directory value="$PROJECT_DIR$/DFA" />
       <framework value="gotest" />
       <kind value="PACKAGE" />
-      <package value="dsm/SIMPLE" />
+      <package value="dsm/DFA" />
       <directory value="$PROJECT_DIR$" />
       <filePath value="$PROJECT_DIR$" />
-      <pattern value="^\QTestMachine_Equal\E$" />
+      <pattern value="^\QTestDFA\E$" />
       <method v="2" />
     </configuration>
-    <configuration name="Test_Condition in dsm/SIMPLE" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+    <configuration name="TestDFA in dsm/NFA (1)" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="dsm" />
-      <working_directory value="$PROJECT_DIR$/SIMPLE" />
+      <working_directory value="$PROJECT_DIR$/NFA" />
       <framework value="gotest" />
       <kind value="PACKAGE" />
-      <package value="dsm/SIMPLE" />
+      <package value="dsm/NFA" />
       <directory value="$PROJECT_DIR$" />
       <filePath value="$PROJECT_DIR$" />
-      <pattern value="^\QTest_Condition\E$" />
+      <pattern value="^\QTestDFA\E$" />
       <method v="2" />
     </configuration>
-    <configuration name="Test_Sequence in dsm/SIMPLE" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+    <configuration name="TestDFA in dsm/NFA" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="dsm" />
-      <working_directory value="$PROJECT_DIR$/SIMPLE" />
+      <working_directory value="$PROJECT_DIR$/NFA" />
       <framework value="gotest" />
       <kind value="PACKAGE" />
-      <package value="dsm/SIMPLE" />
+      <package value="dsm/NFA" />
       <directory value="$PROJECT_DIR$" />
       <filePath value="$PROJECT_DIR$" />
-      <pattern value="^\QTest_Sequence\E$" />
+      <pattern value="^\QTestDFA\E$" />
       <method v="2" />
     </configuration>
-    <configuration name="Test_Statement in dsm/SIMPLE (2)" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+    <configuration name="TestSequence_Evaluate in dsm/LongSteps" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="dsm" />
-      <working_directory value="$PROJECT_DIR$/SIMPLE" />
+      <working_directory value="$PROJECT_DIR$/LongSteps" />
       <framework value="gotest" />
       <kind value="PACKAGE" />
-      <package value="dsm/SIMPLE" />
+      <package value="dsm/LongSteps" />
       <directory value="$PROJECT_DIR$" />
       <filePath value="$PROJECT_DIR$" />
-      <pattern value="^\QTest_Statement\E$" />
+      <pattern value="^\QTestSequence_Evaluate\E$" />
       <method v="2" />
     </configuration>
-    <configuration name="Test_While in dsm/SIMPLE" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+    <configuration name="TestWhile_Evaluate in dsm/LongSteps" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="dsm" />
-      <working_directory value="$PROJECT_DIR$/SIMPLE" />
+      <working_directory value="$PROJECT_DIR$/LongSteps" />
       <framework value="gotest" />
       <kind value="PACKAGE" />
-      <package value="dsm/SIMPLE" />
+      <package value="dsm/LongSteps" />
       <directory value="$PROJECT_DIR$" />
       <filePath value="$PROJECT_DIR$" />
-      <pattern value="^\QTest_While\E$" />
+      <pattern value="^\QTestWhile_Evaluate\E$" />
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Go Test.Test_While in dsm/SIMPLE" />
-        <item itemvalue="Go Test.Test_Sequence in dsm/SIMPLE" />
-        <item itemvalue="Go Test.TestMachine_Equal in dsm/SIMPLE" />
-        <item itemvalue="Go Test.Test_Statement in dsm/SIMPLE (2)" />
-        <item itemvalue="Go Test.Test_Condition in dsm/SIMPLE" />
+        <item itemvalue="Go Test.TestDFA in dsm/NFA (1)" />
+        <item itemvalue="Go Test.TestDFA in dsm/NFA" />
+        <item itemvalue="Go Test.TestDFA in dsm/DFA" />
+        <item itemvalue="Go Test.TestWhile_Evaluate in dsm/LongSteps" />
+        <item itemvalue="Go Test.TestSequence_Evaluate in dsm/LongSteps" />
       </list>
     </recent_temporary>
   </component>
@@ -139,57 +153,74 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="completed short steps" />
-    <option name="LAST_COMMIT_MESSAGE" value="completed short steps" />
+    <MESSAGE value="completed short DFA and NFA" />
+    <option name="LAST_COMMIT_MESSAGE" value="completed short DFA and NFA" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="739" height="466" key="DebuggerActiveHint" timestamp="1605467334827">
+    <state width="822" height="466" key="DebuggerActiveHint" timestamp="1608493814143">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="739" height="466" key="DebuggerActiveHint/0.0.1536.824@0.0.1536.824" timestamp="1605467334827" />
+    <state width="822" height="466" key="DebuggerActiveHint/0.0.1536.824@0.0.1536.824" timestamp="1608493814143" />
     <state x="647" y="310" key="Github.ShareDialog" timestamp="1606328946028">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="647" y="310" key="Github.ShareDialog/0.0.1536.824@0.0.1536.824" timestamp="1606328946028" />
-    <state width="1493" height="261" key="GridCell.Tab.0.bottom" timestamp="1606645742908">
+    <state width="1493" height="163" key="GridCell.Tab.0.bottom" timestamp="1608495753339">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="261" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1606645742908" />
-    <state width="1493" height="261" key="GridCell.Tab.0.center" timestamp="1606645742908">
+    <state width="1493" height="163" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1608495753339" />
+    <state width="1493" height="163" key="GridCell.Tab.0.center" timestamp="1608495753339">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="261" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1606645742908" />
-    <state width="1493" height="261" key="GridCell.Tab.0.left" timestamp="1606645742907">
+    <state width="1493" height="163" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1608495753339" />
+    <state width="1493" height="163" key="GridCell.Tab.0.left" timestamp="1608495753339">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="261" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1606645742907" />
-    <state width="1493" height="261" key="GridCell.Tab.0.right" timestamp="1606645742908">
+    <state width="1493" height="163" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1608495753339" />
+    <state width="1493" height="163" key="GridCell.Tab.0.right" timestamp="1608495753339">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="261" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1606645742908" />
-    <state width="1493" height="261" key="GridCell.Tab.1.bottom" timestamp="1606645742908">
+    <state width="1493" height="163" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1608495753339" />
+    <state width="1493" height="163" key="GridCell.Tab.1.bottom" timestamp="1608495753339">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="261" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1606645742908" />
-    <state width="1493" height="261" key="GridCell.Tab.1.center" timestamp="1606645742908">
+    <state width="1493" height="163" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1608495753339" />
+    <state width="1493" height="163" key="GridCell.Tab.1.center" timestamp="1608495753339">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="261" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1606645742908" />
-    <state width="1493" height="261" key="GridCell.Tab.1.left" timestamp="1606645742908">
+    <state width="1493" height="163" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1608495753339" />
+    <state width="1493" height="163" key="GridCell.Tab.1.left" timestamp="1608495753339">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="261" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1606645742908" />
-    <state width="1493" height="261" key="GridCell.Tab.1.right" timestamp="1606645742908">
+    <state width="1493" height="163" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1608495753339" />
+    <state width="1493" height="163" key="GridCell.Tab.1.right" timestamp="1608495753339">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="261" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1606645742908" />
-    <state x="611" y="173" key="refactoring.ChangeSignatureDialog" timestamp="1605466568134">
+    <state width="1493" height="163" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1608495753339" />
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1606669559645">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="611" y="173" key="refactoring.ChangeSignatureDialog/0.0.1536.824@0.0.1536.824" timestamp="1605466568134" />
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1605461947417">
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1606669559645" />
+    <state x="548" y="227" key="com.goide.refactor.extractInterface.GoExtractInterfaceDialog" timestamp="1606675365998">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1605461947417" />
+    <state x="548" y="227" key="com.goide.refactor.extractInterface.GoExtractInterfaceDialog/0.0.1536.824@0.0.1536.824" timestamp="1606675365998" />
+    <state x="93" y="93" width="1350" height="638" key="dock-window-1" timestamp="1607886971513">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="93" y="93" width="1350" height="638" key="dock-window-1/0.0.1536.824@0.0.1536.824" timestamp="1607886971513" />
+    <state x="93" y="93" width="1350" height="638" key="dock-window-2" timestamp="1607886971513">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="93" y="93" width="1350" height="638" key="dock-window-2/0.0.1536.824@0.0.1536.824" timestamp="1607886971513" />
+    <state x="611" y="173" key="refactoring.ChangeSignatureDialog" timestamp="1606843586544">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="611" y="173" key="refactoring.ChangeSignatureDialog/0.0.1536.824@0.0.1536.824" timestamp="1606843586544" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1608060086068">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1608060086068" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -209,7 +240,32 @@
           <line>120</line>
           <option name="timeStamp" value="7" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/LongSteps/logicOperations_test.go</url>
+          <line>8</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/LongSteps/logicOperations_test.go</url>
+          <line>47</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/NFA/NFA_test.go</url>
+          <line>38</line>
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/NFA/NFA_test.go</url>
+          <line>39</line>
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+    <watches-manager>
+      <configuration name="GoTestRunConfiguration">
+        <watch expression="*(*&quot;dsm/LongSteps.Variable&quot;)(824633902368)" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>
