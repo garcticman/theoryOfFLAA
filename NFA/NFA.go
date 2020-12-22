@@ -1,5 +1,7 @@
 package NFA
 
+import "fmt"
+
 type NFA struct {
 	currentStates []int32
 	acceptStates  []int32
@@ -45,5 +47,15 @@ func (n *NFA) ReadCharacter(character int32) {
 func (n *NFA) ReadString(string string) {
 	for _, v := range string {
 		n.ReadCharacter(v)
+	}
+}
+
+func (n *NFA) CheckAndPrintWords(words []string) {
+	for _, v := range words {
+		newDfa := New(n.currentStates[0], n.acceptStates, n.rulebook)
+		newDfa.ReadString(v)
+		if newDfa.Accepting() {
+			fmt.Println(v)
+		}
 	}
 }

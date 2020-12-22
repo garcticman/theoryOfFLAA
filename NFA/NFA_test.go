@@ -47,3 +47,32 @@ func PrintStructValueMap(valueKeyMap map[DFARule]struct{}) {
 	}
 	fmt.Println()
 }
+
+func TestNFA_OE_AE_IE_Endings(t *testing.T) {
+	rulebook := DFARulebook{rules: []DFARule{{
+		state:     1,
+		character: 'а',
+		nextState: 2,
+	}, {
+		state:     1,
+		character: 'о',
+		nextState: 2,
+	}, {
+		state:     1,
+		character: 'и',
+		nextState: 2,
+	}, {
+		state:     2,
+		character: 'е',
+		nextState: 3,
+	},
+	}}
+
+	alphabet := "абвгдеёжзийклмнопрстуфхцчшщъэьэюя"
+	for _, v := range alphabet {
+		rulebook.AddRule(1, int32(v), 1)
+	}
+
+	nfa := New(1, []int32{3}, rulebook)
+	nfa.CheckAndPrintWords([]string{"большое", "театр", "самолет", "дикие", "танцы", "трение", "дунае"})
+}
