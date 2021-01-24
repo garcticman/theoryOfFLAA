@@ -6,34 +6,34 @@ import (
 )
 
 func TestDFA(t *testing.T) {
-	rulebook := DFARulebook{rules: []DFARule{{
-		state:     2,
-		character: 'b',
-		nextState: 3,
+	rulebook := DFARulebook{Rules: []DFARule{{
+		State:     2,
+		Character: 'b',
+		NextState: 3,
 	}, {
-		state:     2,
-		character: 'a',
-		nextState: 3,
+		State:     2,
+		Character: 'a',
+		NextState: 3,
 	}, {
-		state:     1,
-		character: 'b',
-		nextState: 1,
+		State:     1,
+		Character: 'b',
+		NextState: 1,
 	}, {
-		state:     1,
-		character: 'a',
-		nextState: 1,
+		State:     1,
+		Character: 'a',
+		NextState: 1,
 	}, {
-		state:     1,
-		character: 'b',
-		nextState: 2,
+		State:     1,
+		Character: 'b',
+		NextState: 2,
 	}, {
-		state:     3,
-		character: 'a',
-		nextState: 4,
+		State:     3,
+		Character: 'a',
+		NextState: 4,
 	}, {
-		state:     3,
-		character: 'b',
-		nextState: 4,
+		State:     3,
+		Character: 'b',
+		NextState: 4,
 	}}}
 
 	nfa := New(1, []int32{4}, rulebook)
@@ -43,28 +43,28 @@ func TestDFA(t *testing.T) {
 
 func PrintStructValueMap(valueKeyMap map[DFARule]struct{}) {
 	for value := range valueKeyMap {
-		fmt.Print(value.nextState, " ")
+		fmt.Print(value.NextState, " ")
 	}
 	fmt.Println()
 }
 
 func TestNFA_OE_AE_IE_Endings(t *testing.T) {
-	rulebook := DFARulebook{rules: []DFARule{{
-		state:     1,
-		character: 'а',
-		nextState: 2,
+	rulebook := DFARulebook{Rules: []DFARule{{
+		State:     1,
+		Character: 'а',
+		NextState: 2,
 	}, {
-		state:     1,
-		character: 'о',
-		nextState: 2,
+		State:     1,
+		Character: 'о',
+		NextState: 2,
 	}, {
-		state:     1,
-		character: 'и',
-		nextState: 2,
+		State:     1,
+		Character: 'и',
+		NextState: 2,
 	}, {
-		state:     2,
-		character: 'е',
-		nextState: 3,
+		State:     2,
+		Character: 'е',
+		NextState: 3,
 	},
 	}}
 
@@ -73,6 +73,18 @@ func TestNFA_OE_AE_IE_Endings(t *testing.T) {
 		rulebook.AddRule(1, int32(v), 1)
 	}
 
-	nfa := New(1, []int32{3}, rulebook)
-	nfa.CheckAndPrintWords([]string{"большое", "театр", "самолет", "дикие", "танцы", "трение", "дунае"})
+	//nfa := New(1, []int32{3}, Rulebook)
+	//nfa.CheckAndPrintWords([]string{"большое", "театр", "самолет", "дикие", "танцы", "трение", "дунае"})
+	nfa := NFADesign{
+		CurrentStates: []int32{1},
+		AcceptStates:  []int32{3},
+		Rulebook:      rulebook,
+	}
+	fmt.Println(nfa.Accepts("большое"))
+	fmt.Println(nfa.Accepts("театр"))
+	fmt.Println(nfa.Accepts("самолет"))
+	fmt.Println(nfa.Accepts("дикие"))
+	fmt.Println(nfa.Accepts("танцы"))
+	fmt.Println(nfa.Accepts("трение"))
+	fmt.Println(nfa.Accepts("дунае"))
 }

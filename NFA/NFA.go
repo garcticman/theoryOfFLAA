@@ -15,6 +15,9 @@ func New(startState int32, acceptStates []int32, rulebook DFARulebook) NFA {
 		rulebook:      rulebook,
 	}
 }
+func (n *NFA) GetCurrentStates() []int32 {
+	return n.rulebook.followFreeMoves(n.currentStates)
+}
 func (n *NFA) AddAcceptedState(state int32) {
 	n.acceptStates = append(n.acceptStates, state)
 }
@@ -29,7 +32,7 @@ func (n *NFA) RemoveAcceptedState(state int32) {
 
 func (n *NFA) Accepting() bool {
 	for _, v := range n.acceptStates {
-		for _, v2 := range n.currentStates {
+		for _, v2 := range n.GetCurrentStates() {
 			if v == v2 {
 				return true
 			}
@@ -38,10 +41,10 @@ func (n *NFA) Accepting() bool {
 	return false
 }
 func (n *NFA) ReadCharacter(character int32) {
-	nextStates := n.rulebook.NextStates(n.currentStates, character)
+	nextStates := n.rulebook.NextStates(n.GetCurrentStates(), character)
 	n.currentStates = []int32{}
 	for i := range nextStates {
-		n.currentStates = append(n.currentStates, i.nextState)
+		n.currentStates = append(n.currentStates, i.NextState)
 	}
 }
 func (n *NFA) ReadString(string string) {
