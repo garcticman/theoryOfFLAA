@@ -19,17 +19,19 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="84fa4245-2cd2-4074-83d7-cb1d02a9c85e" name="Default Changelist" comment="completed short DFA and NFA">
-      <change afterPath="$PROJECT_DIR$/NFA/NFADesign.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RegularExpressions/operations.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RegularExpressions/operations_test.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RegularExpressions/stateIterator.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RegularExpressions/task_03_test.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RegularExpressions/Граф переходов.png" afterDir="false" />
+    <list default="true" id="84fa4245-2cd2-4074-83d7-cb1d02a9c85e" name="Default Changelist" comment="task03">
+      <change afterPath="$PROJECT_DIR$/PDA/DPDA.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PDA/DPDADesign.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PDA/DPDA_test.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PDA/PDACnfig.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PDA/PDAConfig_test.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PDA/PDARulebook.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PDA/PDARulebook_test.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PDA/stack.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PDA/stack_test.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PDA/task04_test.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PDA/граф переходов КАМП.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NFA/API.go" beforeDir="false" afterPath="$PROJECT_DIR$/NFA/API.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NFA/NFA.go" beforeDir="false" afterPath="$PROJECT_DIR$/NFA/NFA.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NFA/NFA_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/NFA/NFA_test.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,69 +67,69 @@
       <recent name="D:\goprojs\src\dsm\LongSteps" />
     </key>
   </component>
-  <component name="RunManager" selected="Go Test.TestTask4 in dsm/RegularExpressions">
-    <configuration name="TestChoose in dsm/RegularExpressions" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Go Test.TestDPDA_Task04 in dsm/PDA">
+    <configuration name="TestDPDA in dsm/PDA" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="dsm" />
-      <working_directory value="$PROJECT_DIR$/RegularExpressions" />
+      <working_directory value="$PROJECT_DIR$/PDA" />
       <framework value="gotest" />
       <kind value="PACKAGE" />
-      <package value="dsm/RegularExpressions" />
+      <package value="dsm/PDA" />
       <directory value="$PROJECT_DIR$" />
       <filePath value="$PROJECT_DIR$" />
-      <pattern value="^\QTestChoose\E$" />
+      <pattern value="^\QTestDPDA\E$" />
       <method v="2" />
     </configuration>
-    <configuration name="TestConcatenate in dsm/RegularExpressions" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+    <configuration name="TestDPDA_Task04 in dsm/PDA" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="dsm" />
-      <working_directory value="$PROJECT_DIR$/RegularExpressions" />
+      <working_directory value="$PROJECT_DIR$/PDA" />
       <framework value="gotest" />
       <kind value="PACKAGE" />
-      <package value="dsm/RegularExpressions" />
+      <package value="dsm/PDA" />
       <directory value="$PROJECT_DIR$" />
       <filePath value="$PROJECT_DIR$" />
-      <pattern value="^\QTestConcatenate\E$" />
+      <pattern value="^\QTestDPDA_Task04\E$" />
       <method v="2" />
     </configuration>
-    <configuration name="TestNFA_OE_AE_IE_Endings in dsm/NFA (2)" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+    <configuration name="TestPDARule_AppliesTo in dsm/PDA" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="dsm" />
-      <working_directory value="$PROJECT_DIR$/NFA" />
+      <working_directory value="$PROJECT_DIR$/PDA" />
       <framework value="gotest" />
       <kind value="PACKAGE" />
-      <package value="dsm/NFA" />
+      <package value="dsm/PDA" />
       <directory value="$PROJECT_DIR$" />
       <filePath value="$PROJECT_DIR$" />
-      <pattern value="^\QTestNFA_OE_AE_IE_Endings\E$" />
+      <pattern value="^\QTestPDARule_AppliesTo\E$" />
       <method v="2" />
     </configuration>
-    <configuration name="TestRepeat in dsm/RegularExpressions" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+    <configuration name="TestPDARulebook_NextConfig in dsm/PDA" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="dsm" />
-      <working_directory value="$PROJECT_DIR$/RegularExpressions" />
+      <working_directory value="$PROJECT_DIR$/PDA" />
       <framework value="gotest" />
       <kind value="PACKAGE" />
-      <package value="dsm/RegularExpressions" />
+      <package value="dsm/PDA" />
       <directory value="$PROJECT_DIR$" />
       <filePath value="$PROJECT_DIR$" />
-      <pattern value="^\QTestRepeat\E$" />
+      <pattern value="^\QTestPDARulebook_NextConfig\E$" />
       <method v="2" />
     </configuration>
-    <configuration name="TestTask4 in dsm/RegularExpressions" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+    <configuration name="TestStack in dsm/PDA" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="dsm" />
-      <working_directory value="$PROJECT_DIR$/RegularExpressions" />
+      <working_directory value="$PROJECT_DIR$/PDA" />
       <framework value="gotest" />
       <kind value="PACKAGE" />
-      <package value="dsm/RegularExpressions" />
+      <package value="dsm/PDA" />
       <directory value="$PROJECT_DIR$" />
       <filePath value="$PROJECT_DIR$" />
-      <pattern value="^\QTestTask4\E$" />
+      <pattern value="^\QTestStack\E$" />
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Go Test.TestTask4 in dsm/RegularExpressions" />
-        <item itemvalue="Go Test.TestRepeat in dsm/RegularExpressions" />
-        <item itemvalue="Go Test.TestChoose in dsm/RegularExpressions" />
-        <item itemvalue="Go Test.TestConcatenate in dsm/RegularExpressions" />
-        <item itemvalue="Go Test.TestNFA_OE_AE_IE_Endings in dsm/NFA (2)" />
+        <item itemvalue="Go Test.TestDPDA_Task04 in dsm/PDA" />
+        <item itemvalue="Go Test.TestDPDA in dsm/PDA" />
+        <item itemvalue="Go Test.TestPDARulebook_NextConfig in dsm/PDA" />
+        <item itemvalue="Go Test.TestPDARule_AppliesTo in dsm/PDA" />
+        <item itemvalue="Go Test.TestStack in dsm/PDA" />
       </list>
     </recent_temporary>
   </component>
@@ -150,13 +152,18 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="completed short steps" />
     <MESSAGE value="completed short DFA and NFA" />
-    <option name="LAST_COMMIT_MESSAGE" value="completed short DFA and NFA" />
+    <MESSAGE value="task03" />
+    <option name="LAST_COMMIT_MESSAGE" value="task03" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="822" height="466" key="DebuggerActiveHint" timestamp="1611509543728">
+    <state x="477" y="214" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1611530723128">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="822" height="466" key="DebuggerActiveHint/0.0.1536.824/1920.0.1280.984@0.0.1536.824" timestamp="1611509543728" />
+    <state x="477" y="214" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824/1920.0.1280.984@0.0.1536.824" timestamp="1611530723128" />
+    <state width="822" height="466" key="DebuggerActiveHint" timestamp="1611529384420">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="822" height="466" key="DebuggerActiveHint/0.0.1536.824/1920.0.1280.984@0.0.1536.824" timestamp="1611529384420" />
     <state width="822" height="466" key="DebuggerActiveHint/0.0.1536.824@0.0.1536.824" timestamp="1611495293709" />
     <state x="147" y="64" key="DiffContextDialog" timestamp="1608662599082">
       <screen x="0" y="0" width="1536" height="824" />
@@ -166,57 +173,58 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="647" y="310" key="Github.ShareDialog/0.0.1536.824@0.0.1536.824" timestamp="1606328946028" />
-    <state width="1493" height="197" key="GridCell.Tab.0.bottom" timestamp="1611513817942">
+    <state width="1493" height="197" key="GridCell.Tab.0.bottom" timestamp="1611530306188">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="197" key="GridCell.Tab.0.bottom/0.0.1536.824/1920.0.1280.984@0.0.1536.824" timestamp="1611513817942" />
+    <state width="1493" height="197" key="GridCell.Tab.0.bottom/0.0.1536.824/1920.0.1280.984@0.0.1536.824" timestamp="1611530306188" />
     <state width="1237" height="247" key="GridCell.Tab.0.bottom/0.0.1536.824/1920.0.1280.984@1920.0.1280.984" timestamp="1611388304656" />
     <state width="1493" height="242" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1611507849717" />
-    <state width="1493" height="197" key="GridCell.Tab.0.center" timestamp="1611513817942">
+    <state width="1493" height="197" key="GridCell.Tab.0.center" timestamp="1611530306188">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="197" key="GridCell.Tab.0.center/0.0.1536.824/1920.0.1280.984@0.0.1536.824" timestamp="1611513817942" />
+    <state width="1493" height="197" key="GridCell.Tab.0.center/0.0.1536.824/1920.0.1280.984@0.0.1536.824" timestamp="1611530306188" />
     <state width="1237" height="247" key="GridCell.Tab.0.center/0.0.1536.824/1920.0.1280.984@1920.0.1280.984" timestamp="1611388304655" />
     <state width="1493" height="242" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1611507849717" />
-    <state width="1493" height="197" key="GridCell.Tab.0.left" timestamp="1611513817942">
+    <state width="1493" height="197" key="GridCell.Tab.0.left" timestamp="1611530306188">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="197" key="GridCell.Tab.0.left/0.0.1536.824/1920.0.1280.984@0.0.1536.824" timestamp="1611513817942" />
+    <state width="1493" height="197" key="GridCell.Tab.0.left/0.0.1536.824/1920.0.1280.984@0.0.1536.824" timestamp="1611530306188" />
     <state width="1237" height="247" key="GridCell.Tab.0.left/0.0.1536.824/1920.0.1280.984@1920.0.1280.984" timestamp="1611388304655" />
     <state width="1493" height="242" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1611507849717" />
-    <state width="1493" height="197" key="GridCell.Tab.0.right" timestamp="1611513817942">
+    <state width="1493" height="197" key="GridCell.Tab.0.right" timestamp="1611530306188">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="197" key="GridCell.Tab.0.right/0.0.1536.824/1920.0.1280.984@0.0.1536.824" timestamp="1611513817942" />
+    <state width="1493" height="197" key="GridCell.Tab.0.right/0.0.1536.824/1920.0.1280.984@0.0.1536.824" timestamp="1611530306188" />
     <state width="1237" height="247" key="GridCell.Tab.0.right/0.0.1536.824/1920.0.1280.984@1920.0.1280.984" timestamp="1611388304656" />
     <state width="1493" height="242" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1611507849717" />
-    <state width="1493" height="242" key="GridCell.Tab.1.bottom" timestamp="1611509590569">
+    <state width="1493" height="208" key="GridCell.Tab.1.bottom" timestamp="1611529595165">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="242" key="GridCell.Tab.1.bottom/0.0.1536.824/1920.0.1280.984@0.0.1536.824" timestamp="1611509590569" />
+    <state width="1493" height="208" key="GridCell.Tab.1.bottom/0.0.1536.824/1920.0.1280.984@0.0.1536.824" timestamp="1611529595165" />
     <state width="1493" height="242" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1611507850600" />
-    <state width="1493" height="242" key="GridCell.Tab.1.center" timestamp="1611509590568">
+    <state width="1493" height="208" key="GridCell.Tab.1.center" timestamp="1611529595165">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="242" key="GridCell.Tab.1.center/0.0.1536.824/1920.0.1280.984@0.0.1536.824" timestamp="1611509590568" />
+    <state width="1493" height="208" key="GridCell.Tab.1.center/0.0.1536.824/1920.0.1280.984@0.0.1536.824" timestamp="1611529595165" />
     <state width="1493" height="242" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1611507850599" />
-    <state width="1493" height="242" key="GridCell.Tab.1.left" timestamp="1611509590568">
+    <state width="1493" height="208" key="GridCell.Tab.1.left" timestamp="1611529595165">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="242" key="GridCell.Tab.1.left/0.0.1536.824/1920.0.1280.984@0.0.1536.824" timestamp="1611509590568" />
+    <state width="1493" height="208" key="GridCell.Tab.1.left/0.0.1536.824/1920.0.1280.984@0.0.1536.824" timestamp="1611529595165" />
     <state width="1493" height="242" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1611507850599" />
-    <state width="1493" height="242" key="GridCell.Tab.1.right" timestamp="1611509590569">
+    <state width="1493" height="208" key="GridCell.Tab.1.right" timestamp="1611529595165">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="242" key="GridCell.Tab.1.right/0.0.1536.824/1920.0.1280.984@0.0.1536.824" timestamp="1611509590569" />
+    <state width="1493" height="208" key="GridCell.Tab.1.right/0.0.1536.824/1920.0.1280.984@0.0.1536.824" timestamp="1611529595165" />
     <state width="1493" height="242" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1611507850600" />
     <state x="629" y="114" key="RollbackChangesDialog" timestamp="1608662599884">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="629" y="114" key="RollbackChangesDialog/0.0.1536.824@0.0.1536.824" timestamp="1608662599884" />
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1608663746386">
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1611516385536">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824/1920.0.1280.984@0.0.1536.824" timestamp="1611516385536" />
     <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1608663746386" />
     <state x="548" y="227" key="com.goide.refactor.extractInterface.GoExtractInterfaceDialog" timestamp="1606675365998">
       <screen x="0" y="0" width="1536" height="824" />
@@ -230,6 +238,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="93" y="93" width="1350" height="638" key="dock-window-2/0.0.1536.824@0.0.1536.824" timestamp="1607886971513" />
+    <state x="478" y="11" width="579" height="801" key="find.popup" timestamp="1611530343668">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="478" y="11" width="579" height="801" key="find.popup/0.0.1536.824/1920.0.1280.984@0.0.1536.824" timestamp="1611530343668" />
     <state x="611" y="173" key="refactoring.ChangeSignatureDialog" timestamp="1611494493030">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -269,7 +281,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DlvLineBreakpoint">
           <url>file://$PROJECT_DIR$/RegularExpressions/operations.go</url>
-          <line>99</line>
+          <line>100</line>
           <option name="timeStamp" value="15" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DlvLineBreakpoint">
@@ -284,8 +296,13 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DlvLineBreakpoint">
           <url>file://$PROJECT_DIR$/RegularExpressions/operations.go</url>
-          <line>120</line>
+          <line>121</line>
           <option name="timeStamp" value="19" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/PDA/PDACnfig.go</url>
+          <line>27</line>
+          <option name="timeStamp" value="38" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
